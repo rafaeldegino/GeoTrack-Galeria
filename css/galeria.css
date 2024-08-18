@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+
+body{
+    background-color: #1C1C1C;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Nav bar */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+  background-color: #fff;
+    width: 100%;
+    padding: 15px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Inter", sans-serif;
+    transition: 0.5s;
+    z-index: 2;
+    
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    color: #1C1C1C;
+}
+header.rolagem{
+    background-color: aliceblue;
+    padding: 20px 4%;
+}
+
+header.rolagem a{
+    color: #1C1C1C;
+}
+
+/* Chamada e desc */
+.chamada{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../img/back3.svg) ;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chamada h1 {
+    font-size: 35px;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+  
+.chamada h1 span{
+    color: #F29F05;
+}
+
+/* Config das imgs */
+
+.pics{
+    margin-top: 250px;
+}
+
+@keyframes moverCimaBaixo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: moverCimaBaixo 2s infinite;
+}
+
+
+.seta img{
+    width: 70px;
+    height: 70px;
+    filter: brightness(0) invert(1);
+    margin-top: -110px;
+}
+
+.centralizada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section{
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inter", sans-serif;
+    background-attachment: fixed;
+}
+
+section h1{
+    margin-top: 180px;
+    color: #fff;
+    text-align: center;
+}
+
+section:nth-of-type(1){
+    background-image: url(../img/caminhao1.svg);
+    height: 500px;
+}
+
+section:nth-of-type(3){
+    background-image: url(../img/tubo.svg);
+    height: 500px;
+}
+
+section:nth-of-type(5){
+    background-image: url(../img/trocador.svg);
+    height: 500px;
+}
+
+section:nth-of-type(7){
+    background-image: url(../img/turbina.svg);
+    height: 500px;
+}
+
+/* Social */
+.btn_social { 
+
+  width:100%; 
+  float:left; 
+  display:flex; 
+  margin:auto; 
+ }
+ 
+ .btn_social ul  { 
+ 
+  width:auto; 
+  margin:auto; 
+  float:left; 
+  display:block; 
+ }
+ 
+ .btn_social ul li  { 
+ 
+  position:relative; 
+  background:white; 
+  list-style:none; 
+  float:left; 
+  margin:5px; 
+  z-index:1; 
+  overflow:hidden; 
+  border-radius:3px; 
+  font-size:1.5em; 
+  text-align:center; 
+ }
+ 
+ .btn_social ul li a  { 
+ 
+  width:50px; 
+  height:50px; 
+  line-height:53px; 
+  display:block; 
+  text-decoration:none; 
+  color:#fff; 
+  transition:.4s;
+ 
+ }
+ 
+ .btn_social ul li::before { 
+ 
+  transition:0.4s; 
+  position:absolute; 
+  content:''; 
+  width:100%; 
+  height:100%; 
+  top:90%; 
+  left:0; 
+  background:#F29F05; 
+  z-index:-1; 
+  transform: scale(1); 
+  transition:.4s; 
+ }
+ 
+ .btn_social ul li:hover::before { transition:0.4s; top:0%; }
+ .btn_social ul li a:hover       { color:white; }
+
+ .btn_social ul li img {
+  display: block; /* Torna a imagem um bloco para manipular margens */
+  margin: auto; /* Centraliza horizontalmente */
+  margin-top: 15px;
+}
+
+footer p{
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1180px) {
+    header {
+      padding: 30px 4%;
+    }
+  
+    header ul li {
+      margin: 0 20px;
+    }
+  
+    .chamada h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .desc {
+      font-size: 18px;
+    }
+
+    .btn_social {
+      margin-top: 50px !important;
+    }
+  }
+  
+  /* Smartphones e dispositivos com largura de tela ainda menor */
+  @media only screen and (max-width: 480px) {
+    header {
+      padding: 20px 4% !important; /* Reduz ainda mais o padding no cabeçalho */
+    }
+  
+    header ul li {
+      margin: 0 10px !important; /* Reduz ainda mais a margem entre os itens do menu */
+    }
+  
+    .chamada h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    section h1{
+        margin-top: 80px;
+    }
+    
+    .btn_social {
+      margin-top: 30px !important;
+    }
+  }
+  
